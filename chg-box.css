@@ -1,0 +1,83 @@
+.box-form {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.box-form-header {
+    height: 30px;
+    border-radius: 6px 6px 0 0;
+    width: 99%;
+    top: 0;
+    left: 0;
+}
+
+.box-form-header-group {
+    margin: 0 0.5%;
+    display: grid;
+    grid-template-columns: auto 15px;
+    cursor: pointer;
+}
+
+.box-form-header-group>span {
+    font-size: 18px;
+    margin: 2px;
+}
+
+.box-form-body {
+    width: 99%;
+    height: 7px;
+    overflow: hidden;
+    position: absolute;
+    border-bottom: 1px solid #F2F5FA;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 0 0 0;
+}
+
+.box-content {
+    padding: 6px 0 6px 6px;
+}
+
+.box-on {
+    animation: open-box 1.5s 0s forwards;
+}
+
+.box-off {
+    animation: close-box 1s 0s forwards;
+}
+
+@keyframes open-box {
+    0%{height: 7px;}
+    100%{
+        height: 100%;
+        overflow: auto;
+        position: relative;
+    }
+}
+
+@-webkit-keyframes open-box {
+    0%{height: 7px;}
+    100%{
+        height: 100%;
+        overflow: auto;
+        position: relative;
+    }
+}
+
+@keyframes close-box {
+    0%{height: 100%;}
+    100%{
+        height: 7px;
+        overflow: hidden;
+        position: absolute;
+    }
+}
+
+@-webkit-keyframes close-box {
+    0%{height: 100%;}
+    100%{
+        height: 7px;
+        overflow: hidden;
+        position: absolute;
+    }
+}
